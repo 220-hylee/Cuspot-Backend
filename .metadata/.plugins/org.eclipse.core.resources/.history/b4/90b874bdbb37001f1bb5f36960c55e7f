@@ -1,0 +1,35 @@
+package com.web.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@CrossOrigin
+@Entity
+public class Comments {
+	
+	@Id
+	@GeneratedValue
+	private Long id; // 글번호
+	
+	
+	private String comment; // 내용 
+	
+	@Column(insertable = false, updatable = false, columnDefinition = "date default sysdate")
+	private String date; // 날짜
+	
+	
+	
+	
+	
+}

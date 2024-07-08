@@ -1,0 +1,12 @@
+INDEX VERSION 1.134+C:\cupost boot\Cuspot-Backend\.metadata\.plugins\org.eclipse.jdt.core
+513148075.index
+3197932560.index
+1244234789.index
+2813451206.index
+1205277859.index
+4261833347.index
+743426342.index
+2066591251.index
+1655321471.index
+1188745746.index
+31675146.index

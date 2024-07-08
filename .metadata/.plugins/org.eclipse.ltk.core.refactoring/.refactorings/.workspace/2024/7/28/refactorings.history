@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 11 resources" deleteContents="true" description="Delete 11 resources" element1="/P01_basic" element10="/P08_React_connect" element11="/test" element2="/P02_begin" element3="/P03_board-spring-boot-starter" element4="/P03_starter" element5="/P04_test" element6="/P05_jpa" element7="/P06_data-jpa" element8="/P07_view" element9="/P07_view-thymeleaf" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="11" stamp="1720411331902"/>
+</session>

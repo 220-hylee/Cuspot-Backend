@@ -1,0 +1,11 @@
+package com.web.persistence;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.web.domain.Heart;
+
+public interface HeartRepository extends JpaRepository<Heart, Long> {
+    
+	  Heart findByBoard_IdAndEmail(Long boardId, String email);
+	
+}

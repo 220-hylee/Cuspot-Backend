@@ -1,0 +1,38 @@
+package com.web.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class Likes {
+	
+	@Id
+    @GeneratedValue
+    private Long id; // 번호
+	
+	// 좋아요 갯수
+	private int likes;
+	
+	// 좋아요 상태
+	private boolean liked = true;
+	
+	@ManyToOne
+	@JoinColumn(name = "board_id", nullable = false)
+	private Board board_id;	// 글 번호 
+	
+	 @OneToOne
+	 @JoinColumn(name ="email", nullable = false)
+	 private Board email; // 이메일
+	
+	 
+	 
+}

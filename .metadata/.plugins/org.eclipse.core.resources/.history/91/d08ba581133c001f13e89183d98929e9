@@ -1,0 +1,31 @@
+package com.web.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class Heart{
+	
+	@Id
+    @GeneratedValue
+    private Long id; // 번호
+	
+	// 좋아요 상태
+	private boolean liked = true;
+	
+	@Column(name = "boardid")
+	private Long boardid;	// 글 번호 
+	
+	
+	 private String email; // 이메일
+	
+	 
+	 
+}

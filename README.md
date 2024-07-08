@@ -1,2 +1,0 @@
-# Cuspot-Backend
-Cuspot-Backend

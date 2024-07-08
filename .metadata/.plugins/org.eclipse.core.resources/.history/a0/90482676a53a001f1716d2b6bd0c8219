@@ -1,0 +1,70 @@
+package com.web.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.web.domain.Board;
+import com.web.domain.Heart;
+import com.web.persistence.BoardRepository;
+import com.web.persistence.HeartRepository;
+
+@Service
+public class BoardServiceImpl implements BoardService{
+
+	@Autowired
+	private BoardRepository boardRepo;
+	
+	@Autowired
+	private HeartRepository heartRepo;
+	
+	// 게시판 작성한거 저장하기
+	@Override
+	public void createBoard(Board board) {
+		
+		boardRepo.save(board);
+		
+		 // Heart 엔티티 생성 및 저장
+        Heart heart = new Heart();
+        heart.setBoard_id(board); // 보드와의 관계 설정
+        heart.setEmail(board.getEmail()); // 이메일과의 관계 설정
+
+        heartRepo.save(heart);
+		
+	}
+	
+	// 전체 게시판 글  가져오기
+	@Override
+	public List<Board> getBoardList() {
+		
+		return (List<Board>) boardRepo.findAllByOrderByTimestampDesc();
+	}
+	
+	// 좋아요 갯수 업데이트 
+	@Override
+	public void updateLike(Long postId,int newLikesCount,String email ,boolean liked) {
+		Board board = boardRepo.findById(postId).get();
+		
+		Heart heart = heartRepo.findByIdAndEmail(String email,Long postId).get();
+		
+		board.setLikes(newLikesCount);
+		
+		boardRepo.save(board);
+	}
+	
+	// 좋아요 상태 가져오기 
+	@Override
+	public boolean stateLike(Long postId, String email) {
+		 boolean res = heartRepo.findByIdAndEmail(postId,email);
+		return res;
+	}
+	
+	
+	
+	
+	
+	
+	
+}

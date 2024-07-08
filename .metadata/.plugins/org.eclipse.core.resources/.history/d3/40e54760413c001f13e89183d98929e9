@@ -1,0 +1,8 @@
+package com.web.service;
+
+import com.web.domain.Comments;
+
+public interface CommentsService {
+	
+	public void  insertComments(Comments comments);
+}

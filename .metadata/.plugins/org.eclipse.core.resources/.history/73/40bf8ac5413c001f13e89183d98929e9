@@ -1,0 +1,23 @@
+package com.web.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.web.domain.Comments;
+import com.web.persistence.CommentsRepository;
+
+@Service
+public class CommentsServiceImpl implements CommentsService{
+	
+	@Autowired
+	CommentsRepository CommentsRepo;
+	
+	@Override
+	public void insertComments(Comments comments) {
+		CommentsRepo.save(comments);
+		
+	}
+	
+	
+	
+}

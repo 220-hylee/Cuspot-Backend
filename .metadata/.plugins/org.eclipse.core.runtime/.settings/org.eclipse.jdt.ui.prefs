@@ -1,0 +1,14 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.web.jdbc.util.JDBCConnectionManager"><rhs name\="com.web.jdbc.util.JDBCConnectionManager"/></lhs><lhs name\="java.lang.Enum"><rhs name\="org.springframework.boot.test.context.SpringBootTest$WebEnvironment"/><rhs name\="org.springframework.http.HttpStatus"/><rhs name\="javax.persistence.GenerationType"/></lhs><lhs name\="org.springframework.data.util.Streamable"><rhs name\="org.springframework.data.domain.Sort"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="org.springframework.data.domain.Sort"/></lhs><lhs name\="java.util.function.Supplier"><rhs name\="org.springframework.data.domain.Sort"/></lhs><lhs name\="org.springframework.data.domain.Sort"><rhs name\="org.springframework.data.domain.Sort"/></lhs><lhs name\="org.springframework.data.domain.Pageable"><rhs name\="org.springframework.data.domain.PageRequest"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="com.web.domain.Heart"><rhs name\="com.web.domain.Heart"/></lhs><lhs name\="com.web.domain.Comments"><rhs name\="com.web.domain.Comments"/></lhs></history>
+content_assist_number_of_computers=16
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.exception.name=e
+org.eclipse.jdt.ui.formatterprofiles.version=23
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.overrideannotation=true
+sourceHoverBackgroundColor=47,47,47
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

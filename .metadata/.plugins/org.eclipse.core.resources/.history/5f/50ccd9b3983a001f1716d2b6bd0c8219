@@ -1,0 +1,28 @@
+package com.web.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class Likes {
+	
+	@Id
+    @GeneratedValue
+    private Long id; // 번호
+	
+	private int like;
+	
+	
+	 @OneToOne
+	 @JoinColumn(name ="email", nullable = false)
+	 private Board email; // 이메일
+	
+}

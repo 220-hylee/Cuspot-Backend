@@ -1,0 +1,38 @@
+package com.web.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@CrossOrigin
+@Entity
+public class Comments {
+	
+	@Id
+	@GeneratedValue
+	private Long id; // 글번호
+	
+	
+	private String comment; // 내용 
+	
+	@Column(insertable = false, updatable = false, columnDefinition = "date default sysdate")
+	private String date; // 날짜
+	
+	
+	@ManyToOne										   // 다대일(N:1) : 관계 설정
+	// @JoinColumn(name="MEMBER_ID") 				   // 외래키 조인 : 외부 조인
+	@JoinColumn(name="BOARD_ID", nullable = false)    // 외래키 조안 : 내부 조인
+	private Board board;		
+	
+	
+}
