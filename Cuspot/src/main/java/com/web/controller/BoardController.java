@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,7 +40,21 @@ public class BoardController {
 		return boardList ;
 	}
 	
-
+	
+	// 게시판 삭제 하기
+	@DeleteMapping("/deleteBoard/{postId}")
+	public void DeleteBoard(@PathVariable Long postId) {
+		bs.deleteBoard(postId);
+	}
+	
+	
+	// 좋아요 갯수 가져오기
+	@GetMapping("/getLikes/{postId}")
+	public int getLikes(@PathVariable Long postId) {
+		
+		return bs.getLikes(postId);
+	}
+	
 	
 	// 좋아요 갯수 및 상태 업데이트
 	@PostMapping("/updateLike/{postId}/{newLikesCount}")

@@ -1,0 +1,13 @@
+package com.web.persistence;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.web.domain.Comments;
+
+public interface CommentsRepository extends CrudRepository<Comments, Long>{
+	
+	 List<Comments> findByBoardidOrderByCreateDateDesc(Long boardId);
+	 
+}

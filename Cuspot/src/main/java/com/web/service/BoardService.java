@@ -15,8 +15,13 @@ public interface BoardService {
 	// 전체 게시판 가져오기
 	List<Board> getBoardList();
 	
+	// 게시판 삭제하기
+	void deleteBoard(Long postId);
+	
 	// 좋아요 갯수 업데이트
 	void updateLike(Long postId,int newLikesCount);
 	
+	// 좋아요 갯수 가져오기
+	int getLikes(Long postId);
 }
 	

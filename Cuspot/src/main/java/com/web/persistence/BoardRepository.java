@@ -12,4 +12,10 @@ public interface BoardRepository extends CrudRepository<Board, Long> {
 	 List<Board> findAllByOrderByTimestampDesc();
 	 
 	 
+	 
+	 
+	// 좋아요 갯수 가져오기
+	int findByLikes(Long postId);
+
+
 }

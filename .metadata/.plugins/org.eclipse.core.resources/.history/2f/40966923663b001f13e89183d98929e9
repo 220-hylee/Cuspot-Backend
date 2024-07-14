@@ -1,6 +1,0 @@
-package com.web.service;
-
-public interface HeartService {
-	// 게시판 마다 좋아요 상태 만들기
-	public void insertLike(Long postId, String email);
-}

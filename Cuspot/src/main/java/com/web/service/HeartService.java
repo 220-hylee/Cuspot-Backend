@@ -1,7 +1,5 @@
 package com.web.service;
 
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.web.domain.Heart;
 
 public interface HeartService {
